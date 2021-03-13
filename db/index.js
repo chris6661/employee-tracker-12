@@ -165,7 +165,7 @@ function endConnection() {
     connection.end(); 
 }
 
-modeule.exports = {
+module.exports = {
     createDepartment, 
     createRole, 
     createEmployee, 
