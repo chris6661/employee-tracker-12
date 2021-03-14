@@ -16,3 +16,6 @@ To run this application from cloning, install the above packages and run 'npm st
  * Inquirer
  * MySQL
  * asciiart-logo
+
+ ## Demo
+ Video deomstration can be found in the assets folder.
