@@ -7,21 +7,21 @@ const mainPrompt = () => {
             name: 'choice',
             message: 'What would you like to do?',
             choices: [
-                'View all departments',
-                'Add department',
-                'Remove department',
-                'View all roles',
-                'Add role',
-                'Remove role',
-                'View all employees',
-                'View all employees by manager',
-                'View all employees by department',
-                'Add employee',
-                'Update employee role',
-                'Update employee manager',
-                'Remove employee',
-                'View utilized budget by department',
-                'Exit'
+                'view all departments',
+                'add department',
+                'remove department',
+                'view all roles',
+                'add role',
+                'remove role',
+                'view all employees',
+                'view all employees by manager',
+                'view all employees by department',
+                'add employee',
+                'update employee role',
+                'update employee manager',
+                'remove employee',
+                'view utilized budget by department',
+                'exit'
             ],
             default: 'exit'
         }
@@ -31,8 +31,8 @@ const mainPrompt = () => {
 const selectFromList = (topic, selectionList) => {
     return inquirer.prompt([
         {
-            type: 'list', 
-            name: 'id', 
+            type: 'list',
+            name: 'id',
             message: `Which ${topic} would you like to select?`,
             choices: selectionList
         }
@@ -42,8 +42,8 @@ const selectFromList = (topic, selectionList) => {
 const getName = (nameWanted) => {
     return inquirer.prompt([
         {
-            type: 'input', 
-            name: 'newName', 
+            type: 'input',
+            name: 'newName',
             message: `What is the ${nameWanted}?`,
             validate: nameInput => {
                 if (nameInput) {
@@ -61,7 +61,7 @@ const getSalary = () => {
         {
             type: 'number',
             name: 'salary',
-            message: 'What is their salary?',
+            message: 'What is the salary?',
             validate: nbInput => {
                 if (!isNaN(parseFloat(nbInput)) && parseFloat(nbInput) >= 0) {
                     return true;
@@ -74,8 +74,8 @@ const getSalary = () => {
 };
 
 module.exports = {
-    mainPrompt, 
-    selectFromList, 
-    getName, 
+    mainPrompt,
+    selectFromList,
+    getName,
     getSalary
 }

@@ -6,6 +6,8 @@ const {
 } = require('./utils/prompts');
 const db = require('./db');
 require('console.table');
+const logo = require('asciiart-logo');
+const appLogo = logo({name: "Employee Manager"}).render()
 
 //departments
 function viewAllDepartments() {
@@ -378,5 +380,5 @@ function selectAction(choice) {
 }
 
 // start app
-
+console.log(appLogo);
 askUser();
