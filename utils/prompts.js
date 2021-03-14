@@ -22,8 +22,7 @@ const mainPrompt = () => {
                 'remove employee',
                 'view utilized budget by department',
                 'exit'
-            ],
-            default: 'exit'
+            ]
         }
     ]);
 };

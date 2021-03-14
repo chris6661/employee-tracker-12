@@ -50,7 +50,7 @@ function readAllEmployees() {
         LEFT JOIN roles ON emp1.role_id = roles.id
         LEFT JOIN departments ON roles.dpt_id = departments.id
         LEFT JOIN employees emp2 ON emp1.mgr_id = emp2.id
-        ORDER BY emp1.last_name`;
+        ORDER BY emp1.id`;
     const params = [];
     return connection.promise().query(sql, params)
         .then(([rows, fields]) => rows)
